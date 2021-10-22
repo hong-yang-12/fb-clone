@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="feather-icons-web/feather.css">
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"> -->
+</head>
+<body>
+    <nav class="nav">
+        <div class="left-nav">  
+            <div class="left-box">
+                <img src="images/fb-logo.png" class="fb-logo" alt="">
+                <div class="search-box">
+                    <i class="feather feather-search" id="search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search Facebook">
+                </div>
+            </div>
+        </div>
+        <div class="center-nav">
+            <div class="center-box">
+                <div class="center-link active" style="color: var(--dark-text);">
+                    <i class="feather feather-home" id="center-icon"></i>
+                </div>
+                <div class="center-link" style="color: var(--dark-text);">
+                    <i class="feather feather-airplay" id="center-icon"></i>
+                    <div class="center-noti">
+                        <p>9+</p>
+                    </div>
+                </div>
+                <div class="center-link" style="color: var(--dark-text);">
+                    <i class="feather feather-users" id="center-icon"></i>
+                    <!-- <i class="fas fa-users" id="center-icon"></i> -->
+                    <div class="center-noti">
+                        <p>9+</p>
+                    </div>
+                </div>
+                <!-- <div class="center-link" style="color: var(--dark-text);">
+                    <i class="feather feather-user center-profile" id="center-icon"></i>
+                </div> -->
+                <div class="center-link" style="color: var(--dark-text);">
+                    <i class="feather feather-grid" id="center-icon"></i>
+                    <div class="center-noti">
+                        <p>9+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="right-box">
+                <div class="right-profile">
+                    <img class="right-profile-picture" src="images/hanjizoe.jpg" alt="">
+                    <p>Hong</p>
+                </div>
+                <div class="right-link">
+                    <i class="feather feather-menu"></i>
+                </div>
+                <div class="right-link">
+                    <i class="feather feather-message-circle"></i>
+                </div>
+                <div class="right-link">
+                    <i class="feather feather-bell"></i>
+                </div>
+                <div class="right-link" style="margin-right: 10px;">
+                    <i class="feather feather-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="fb-body">
+        <section class="left-body scrolling">
+            <div class="personal-shortcut">
+                <div class="left-col left-profile">
+                    <img class="left-col-icon" src="images/hanjizoe.jpg" alt="">
+                    <span class="left-col-name">Hong Yang</span>
+                </div>
+                <div class="left-col left-friends">
+                    <i class="fas fa-user-friends left-col-icon"></i>
+                    <span class="left-col-name">Friends</span>
+                </div>
+                <div class="left-col left-saved">
+                    <i class="fas fa-bookmark left-col-icon"></i>
+                    <span class="left-col-name">Saved</span>
+                </div>
+                <div class="left-col left-groups">
+                    <i class="fas fa-users left-col-icon"></i>
+                    <span class="left-col-name">Groups</span>
+                </div>
+                <div class="left-col left-memories">
+                    <i class="fas fa-history left-col-icon"></i>
+                    <span class="left-col-name">Memories</span>
+                </div>
+                <div class="left-col left-pages">
+                    <i class="fas fa-flag left-col-icon"></i>
+                    <span class="left-col-name">Pages</span>
+                </div>
+                <div class="left-col left-ad-center">
+                    <i class="fas fa-bullhorn left-col-icon"></i>
+                    <span class="left-col-name">Ad Center</span>
+                </div>
+                <div class="left-col left-ads-manager">
+                    <i class="far fa-chart-bar left-col-icon"></i>
+                    <span class="left-col-name">Ad Manager</span>
+                </div>
+                <div class="left-col left-campus">
+                    <i class="fas fa-university left-col-icon"></i>
+                    <span class="left-col-name">Campus</span>
+                </div>
+                <div class="left-col left-community-help">
+                    <i class="fas fa-hand-holding-heart left-col-icon   "></i>
+                    <span class="left-col-name">Community Help</span>
+                </div>
+                <div class="left-col left-covidInformation-center">
+                    <i class="far fa-heart left-col-icon"></i>
+                    <span class="left-col-name">Covid 19 information Center</span>
+                </div>
+                <div class="left-col left-emotional-health">
+                    <i class="far fa-laugh-beam left-col-icon"></i>
+                    <span class="left-col-name">Emotional Health</span>
+                </div>
+                <div class="left-col left-events">
+                    <i class="far fa-calendar-check left-col-icon"></i>
+                    <span class="left-col-name">Events</span>
+                </div>
+                <div class="left-col left-fbpay">
+                    <i class="fas fa-credit-card left-col-icon"></i>
+                    <span class="left-col-name">Facebook Pay</span>
+                </div>
+                <div class="left-col left-favorite">
+                    <i class="fas fa-star left-col-icon"></i>
+                    <span class="left-col-name">Favorite</span>
+                </div>
+                <div class="left-col left-fundraisers">
+                    <i class="fas fa-heart left-col-icon"></i>
+                    <span class="left-col-name">Fundraisers</span>
+                </div>
+                <div class="left-col left-gaming-videos">
+                    <i class="fas fa-play-circle left-col-icon"></i>
+                    <span class="left-col-name">Gaming Videos</span>
+                </div>
+                <div class="left-col left-jobs">
+                    <i class="fas fa-briefcase left-col-icon"></i>
+                    <span class="left-col-name">Jobs</span>
+                </div>
+                <div class="left-col left-live-video">
+                    <i class="fas fa-video left-col-icon"></i>
+                    <span class="left-col-name">Live Video</span>
+                </div>
+                <div class="left-col left-messenger">
+                    <i class="fab fa-facebook-messenger left-col-icon"></i>
+                    <span class="left-col-name">Messenger</span>
+                </div>
+                <div class="left-col left-messenger-kids">
+                    <i class="fas fa-comment-dots left-col-icon"></i>
+                    <span class="left-col-name">Messenger Kids</span>
+                </div>
+                <div class="left-col left-most-recent">
+                    <i class="fas fa-redo-alt left-col-icon"></i>
+                    <span class="left-col-name">Most Recent</span>
+                </div>
+                <div class="left-col left-play-games">
+                    <i class="fas fa-gamepad left-col-icon"></i>
+                    <span class="left-col-name">Play Games</span>
+                </div>
+                <div class="left-col left-recent-adActivity">
+                    <i class="fas fa-ad left-col-icon"></i>
+                    <span class="left-col-name">Ad Activity</span>
+                </div>
+                <div class="left-col left-watch">
+                    <i class="fab fa-youtube left-col-icon"></i>
+                    <span class="left-col-name">Watch</span>
+                </div>
+                <div class="left-col left-weather">
+                    <i class="fas fa-cloud-sun left-col-icon"></i>
+                    <span class="left-col-name">Weather</span>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+
+            <div class="left-group-shortcut">
+                <div class="left-group-title">
+                    <span style="color: var(--dark-text);">Your Shortcuts</span>
+                    <div class="left-groupTitle-edit">
+                        <p>Edit</p>
+                    </div>
+                </div>
+
+                <div class="leftgroups">
+                    <img src="images/bwd.jpg" class="left-group-img" alt="">
+                    <span>MMS IT BWD</span>
+                </div>
+                <div class="leftgroups">
+                    <img src="images/swd.jpg" class="left-group-img" alt="">
+                    <span>MMS IT SWD</span>
+                </div>
+                <div class="leftgroups">
+                    <img src="images/web-dev.jpg" class="left-group-img" alt="">
+                    <span>MMS IT Web Dev</span>
+                </div>
+                <div class="leftgroups">
+                    <img src="images/food-mdy.jpg" class="left-group-img" alt="">
+                    <span>Food @ Mdy</span>
+                </div>
+                <div class="leftgroups">
+                    <img src="images/part-time.jpg" class="left-group-img" alt="">
+                    <span>Part Time Job Myanmar</span>
+                </div>
+                <div class="leftgroups">
+                    <div class="left-seeMore-icon">
+                        <i class="feather-chevron-down"></i>
+                    </div>
+                    <span>See More</span>
+                </div>
+            </div>
+        </section>
+        <section class="center-body scrolling">
+            <div class="myday-list">
+                <div class="myday-stories" style="background-image: url('images/hanjizoe.jpg');">
+                        <div class="create-story-button");">
+                            <i class="feather feather-plus create-story-button-icon"></i>
+                        </div>
+                        <p class="myday-user-names">Create story</p>
+                </div>
+
+                <div class="myday-stories" style="background-image: url('images/shieldHero.png');">
+                        <div class="myday-users");">
+                            <img class="myday-users-icons" src="images/kyawminhein.jpg  " alt="">
+                        </div>
+                        <p class="myday-user-names">Kyaw Min Hein</p>
+                </div>
+                
+                <div class="myday-stories" style="background-image: url('images/minminhtike.jpg');">
+                        <div class="myday-users");">
+                            <img class="myday-users-icons" src="images/aungPyaeSoneMoe.jpg" alt="">
+                        </div>
+                        <p class="myday-user-names">Aung Pyae Sone Moe</p>
+                </div>
+    
+                <div class="myday-stories" style="background-image: url('images/thantnayaungmyday.jpg');">
+                        <div class="myday-users");">
+                            <img class="myday-users-icons" src="images/thantnayaungpf.jpg" alt="">
+                        </div>
+                        <p class="myday-user-names">Thant Nay Aung</p>
+                </div>
+                
+                <div class="myday-stories" style="background-image: url('images/thihaNaingmyday.jpg');">
+                        <div class="myday-users");">
+                            <img class="myday-users-icons" src="images/thihaNaing.jpg" alt="">
+                        </div>
+                        <p class="myday-user-names">Thiha Naing</p>
+                </div>
+                
+                <div class="myday-stories" style="background-image: url('images/thanTunAunggf.jpg');">
+                        <div class="myday-users");">
+                            <img class="myday-users-icons" src="images/thanTunAungPf.jpg" alt="">
+                        </div>
+                        <p class="myday-user-names">Than Tun Aung</p>
+                </div>
+
+                <div class="more-stories-button">
+                    <i class="feather feather-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="create-post">
+                <div class="create-post-box">
+                    <img class="center-profile-img" src="images/hanjizoe.jpg" alt="">
+                    <div class="post-input">
+                        <input type="text" name="" id="post-input-textbox" placeholder="What's on your mind,Hong?">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="create-post-aids">
+                    <div class="live-video">
+                        <i class="feather-video"></i>
+                        <span>Live Video</span>
+                    </div>
+                    <div class="photo-video">
+                        <i class="feather-image"></i>
+                        <span>Photo/Video</span>
+                    </div>
+                    <div class="feeling-activity">
+                        <i class="far fa-laugh"></i>
+                        <span>feeling/activity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-room">
+                <div class="create-room-buttom">
+                    <i class="fas fa-video"></i>
+                    <span>Create Room</span>
+                </div>
+                <div class="center-friends">
+                    <img src="images/thihaNaing.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/thantnayaungpf.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/thanTunAungPf.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/aungPyaeSoneMoe.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/soeWinHtunPf.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/kyawminhein.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/aaa.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/kaungsanhein.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+                <div class="center-friends">
+                    <img src="images/thihaNaing.jpg" alt="">
+                    <div class="active-green"></div>
+                </div>
+
+                <div class="center-more-friends">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="newfeed">
+                <div class="standard-post">
+                    <!-- standard-post = photo + text -->
+                    <div class="post-header">
+                        <div class="post-owner-div">
+                            <img src="images/laylinesayar.png" alt="">
+                            <div class="post-properties">
+                                <span class="post-owner-name">Lay Line Sayar</span>
+                                <div class="post-time-privacy">
+                                    <span class="post-time">5hr</span>
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-menu">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+
+                    <div class="text-area">
+                        <p>“Code မရေးချင်ဘဲ Website လုပ်ချင်သူများအတွက်...”
+                            ဒီနေ့မှာတော့ Code မရေးချင်ဘဲ Website ရေးချင်သူတွေအတွက် No Code Low Code Platform တစ်ခုဖြစ်တဲ့ WordPress နဲ့ပတ်သတ်တဲ့ Udemy Course 2 ခုကိုပညာဒါနအနေနဲ့ ချပေးလိုက်ပါတယ်။ 
+                            Course တစ်ခုကတော့ Wordpress ကို တခါမှ မသုံးဖူးတဲ့ လူတွေအတွက်ရည်ရွယ်ထားတာဖြစ်ပြီးတော့ နောက်တစ်ခုကတော့ HTML, CSS စတဲ့ Web အခြေခံရသူတွေအတွက် Wordpress ကို Custom Theme နဲ့ Plug In Code ရေးတို့ကိုသင်ပေးထားတဲ့ Course တစ်ခုဖြစ်ပါတယ်။ 
+                            WordPress for Beginners: Master WordPress Swiftly - https://library.laylinesayar.com/wordpress-for-beginners.../ 
+                            Become a WordPress Developer: Unlocking Power With Code - https://library.laylinesayar.com/become-a-wordpress.../ 
+                            -
+                            ကျနော်တို့အနေနဲ့ Course အသစ်လေးတွေနဲ့ စာအုပ်အသစ်လေးတွေကို Telegram Channel မှာ တင်ပေးထားမှာဖြစ်ပြီးတော့ Facebook မှာတော့ Collection လေးတွေအနေနဲ့ တင်ပေးသွားမှာဖြစ်ပါတယ်။ အဲ့ဒါကြောင့်မို့ အချိန်နဲ့ တစ်ပြေးညီ Course လေးတွေနဲ့ စာအုပ်တွေသိရဖို့အတွက်ကျနော်တို့ Telegram Channel လေးလည်း Join ပေးထားပါဦးနော်။
+                            👇👇👇
+                            https://t.me/LaylineSayar</p>
+                    </div>
+
+                    <div class="photo-area">
+                        <img src="images/laylinesayarpost.jpg" alt="">
+                    </div>
+
+                    <div class="reaction-area">
+                        <div class="reactions">
+                            <div class="like-reaction all-reaction">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="love-reaction all-reaction">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="reaction-count">
+                                <span>20</span>
+                            </div>
+                        </div>
+                        <div class="shares">
+                            <span>1 share</span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="post-button-area">
+                        <div class="like-button button">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </div>
+                        <div class="comment-button button">
+                            <i class="far fa-comment-alt"></i>
+                            <span>Comment</span>
+                        </div>
+                        <div class="share-button button">
+                            <i class="fas fa-reply"></i>
+                            <span>Share</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="textOnly-post">
+                    <div class="post-header">
+                        <div class="post-owner-div">
+                            <img src="images/thihaNaing.jpg" alt="">
+                            <div class="post-properties">
+                                <span class="post-owner-name">Thiha Naing</span>
+                                <div class="post-time-privacy">
+                                    <span class="post-time">2hr</span>
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-menu">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+    
+                    <div class="text-area">
+                        <p>ငါ့လည်း လာကြိုက်ကြပါဦး</p>
+                    </div>
+    
+                    <div class="reaction-area">
+                        <div class="reactions">
+                            <div class="haha-reaction all-reaction">
+                                <i class="far fa-laugh-squint" style="color: var(--dark);"></i>
+                            </div>
+                            <div class="sad-reaction all-reaction">
+                                <i class="far fa-sad-tear" style="color: var(--dark);"></i>
+                            </div>
+                            <div class="reaction-count">
+                                <span>50</span>
+                            </div>
+                        </div>
+                        <div class="shares">
+                            <span>1 share</span>
+                        </div>
+                    </div>
+    
+                    <div class="divider"></div>
+    
+                    <div class="post-button-area">
+                            <div class="like-button button">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>Like</span>
+                            </div>
+                            <div class="comment-button button">
+                                <i class="far fa-comment-alt"></i>
+                                <span>Comment</span>
+                            </div>
+                            <div class="share-button button">
+                                <i class="fas fa-reply"></i>
+                                <span>Share</span>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="photoOnly-post">
+                    <div class="post-header">
+                        <div class="post-owner-div">
+                            <img src="images/somewhereoverinternet.jpg" alt="">
+                            <div class="post-properties">
+                                <span class="post-owner-name">Somewhere Over Internet</span>
+                                <div class="post-time-privacy">
+                                    <span class="post-time">1d</span>
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-menu">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="photo-area">
+                        <img src="images/somewhereoverinternetpost.jpg" alt="">
+                    </div>
+
+                    <div class="reaction-area">
+                        <div class="reactions">
+                            <div class="like-reaction all-reaction">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="love-reaction all-reaction">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="reaction-count">
+                                <span>20</span>
+                            </div>
+                        </div>
+                        <div class="shares">
+                            <span>1 share</span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="post-button-area">
+                        <div class="like-button button">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </div>
+                        <div class="comment-button button">
+                            <i class="far fa-comment-alt"></i>
+                            <span>Comment</span>
+                        </div>
+                        <div class="share-button button">
+                            <i class="fas fa-reply"></i>
+                            <span>Share</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="right-body scrolling">
+            <div class="right-one">
+                <div class="right-friend-requests">
+                    <div class="right-one-header">
+                        <div class="right-one-title">
+                            <i class="fas fa-user-friends"></i>
+                            <span style="color: var(--dark-text);">Friend Requests</span>
+                        </div>
+                        <div class="right-one-menu">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+
+                    <div class="right-one-body">
+                        <img src="images/aaa.jpg" alt="">
+                        <div class="right-one-person">
+                            <div class="right-person-name">
+                                <span>Ruyi</span>
+                                <p>1d</p>
+                            </div>
+
+                            <div class="right-person-buttons">
+                                <div class="right-confirm-button right-button ">
+                                    <p>Confirm</p>
+                                </div>
+                                <div class="right-cancel-button right-button ">
+                                    <p>Cancel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-sponsored">
+                <h6 style="color: var(--dark-text);">Sponsored</h2>
+                    <div class="right-ad">
+                        <img src="images/wyd-mmorpg.jpeg" alt="">
+                        <div class="right-ad-text">
+                            <span>WYD Classic MMORPG to play with friends</span>
+                            <p>wydglobal.raidhut.com</p>
+                        </div>
+                    </div>
+
+                    <div class="right-ad">
+                        <img src="images/foodpanda.jpeg" alt="">
+                        <div class="right-ad-text">
+                            <span>ဆိုင်များနှင့် ပထမဆုံးမှာသူများ ၅၀% လျော့စျေး</span>
+                            <p>foodpanda.com.mm</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="right-contacts">
+                <div class="right-contacts-header">
+                    <span style="color: var(--dark-text);">Contacts</span>
+                    <div class="right-contacts-button"">
+                        <i class="fas fa-video" style="color: var(--dark-text);"></i>
+                        <i class="fas fa-search" style="color: var(--dark-text);"></i>
+                        <i class="fas fa-ellipsis-h" style="color: var(--dark-text);"></i>
+                    </div>
+                </div>
+
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/thihaNaing.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Thiha Naing</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/aaa.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Aye Aye Aung</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/kyawminhein.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Kyaw Min Hein</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/soeWinHtunPf.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Soe Win Htun<span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/kaungsithu.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Kaung Si Thu</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/kaungsanhein.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Kaung San Hein</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/aungPyaeSoneMoe.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Aung Pyae Sone Moe</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/thantnayaungpf.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Thant Nay Aung</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/thanTunAungPf.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Than Tun Aung</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/khunTarMinSein.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Khun Tar Min Sein</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/mother.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Nang Saw Oo</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/dawKhamHla.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Daw Kham Hla</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/aungPyaeSanWin.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Aung Pyae San Win</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/bradyThant.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Brady Thant</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/khinChoHtet.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Khin Cho Htet</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/khunJarlPhyo.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Khun Jarl Phyo</span>
+                </div>
+                <div class="right-chat-box">
+                    <div class="center-friends">
+                        <img src="images/khunNaung.jpg" alt="">
+                        <div class="active-green"></div>
+                    </div>
+                    <span>Khun Naung</span>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
